@@ -1,0 +1,252 @@
+:root{
+	font-size: 16px;
+	--text-primary: #b6b6b6;
+	--text-secondary: #ececec;
+	--bg-primary: #23232e;
+	--bg-secondary: #141418;
+	--transition-speed: .6s;
+}
+
+body::-webkit-scrollbar{
+	width: .3rem;
+}
+body::-webkit-scrollbar-track{
+	background: #1e1e24;
+}
+body::-webkit-scrollbar-thumb{
+	background: #2a80b9;
+}
+
+/*CARDS DESPLEGABLES*/
+.container{left: 100px;}
+.card-movil{
+	width: 320px; height: 450px;
+	background: #5c5c5c;
+	border-radius: 20px;
+}
+
+.card-movil::before{
+	content: '';
+	position: absolute;
+	top: 0; left: 0;
+	width: 100%; height: 100%;
+	background: #2a80b9;
+	clip-path: circle(150px at 80% 20%);
+	transition: 0.5s ease-in-out;
+}
+.card-movil:hover::before{
+	clip-path: circle(300px at 80% -20%);
+}
+
+.card-movil::after{
+	content: 'TOURS'; display: flex;
+	position: absolute;
+	top: 30%; left: -3px;
+	font-size: 6em; font-weight: 800;
+	color: rgba(255,255,255,0.5);
+}
+
+.imgBx{
+	top: 30%;
+	transform: translateY(-50%);
+	z-index: 100;
+	width: 100%; height: 220px;
+	transition: 0.7s ease-in-out; transform: scale(.8);
+}
+.card-movil:hover .imgBx{
+	top: -29%;
+	transform: translateY(0%);
+	transform: scale(1);
+}
+
+.imgBx img{
+	top: 20%;
+	transform: translate(-50%,50%);
+	width: 280px;
+}
+
+.contentBx{
+	bottom: 0;
+	width: 100%; height: 100%;
+	transition: 1s ease-in-out;
+	z-index: 10;
+}
+
+.card-movil:hover .contentBx{
+	height: 210px;
+}
+.contentBx h2{
+	letter-spacing: 1px;
+	color: #ffffff;
+}
+
+.card-movil .contentBx .size,
+.card-movil .contentBx .color{
+	transition: 0.5s ease-in-out;
+	opacity: 0;
+	visibility: hidden;
+}
+
+.card-movil:hover .contentBx .size{
+	opacity: 1;
+	visibility: visible;
+	transition-delay: 0.5s;
+}
+.card-movil:hover .contentBx .color{
+	opacity: 1;
+	visibility: visible;
+	transition-delay: 0.6s;
+}
+
+.card-movil .contentBx .size h3,
+.card-movil .contentBx .color h3{
+	color: #ffffff;
+	font-weight: 300; font-size: 14px;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	margin-right: 10px;
+}
+
+.card-movil .contentBx .size label{
+	width: 26px; height: 26px;
+	text-align: center;
+	line-height: 26px; font-size: 14px;
+	display: inline-block;
+	color: #111111;
+	background: #ffffff;
+	margin: 0 5px;
+	border-radius: 4px;
+	cursor: pointer;
+	transition: 0.5s;
+}
+.card-movil .contentBx .size label:hover{
+	background: #9bdc28;
+}
+
+.card-movil .contentBx .color label{
+	width: 20px; height: 20px;
+	background: #ffff00;
+	border-radius: 50%;
+	margin: 0 5px;
+	cursor: pointer;
+	transition: border 0.1s linear;
+}
+.card-movil .contentBx .color label:nth-child(2){
+	background: #9bdc28;
+}
+.card-movil .contentBx .color label:nth-child(3){
+	background: #03a9f4;
+}
+.card-movil .contentBx .color label:nth-child(4){
+	background: #e91e63;
+}
+.card-movil .contentBx .color label:hover{
+	border: 3px solid;
+}
+#hh7:checked ~ #ho7{
+	background: #23232e;
+}
+
+.card-movil .contentBx .btn-group{
+	opacity: 0;
+	transition: 0.5s;
+}
+.card-movil:hover .contentBx .btn-group{
+	opacity: 1;
+	transform: translateY(0px);
+	transition-delay: 0.75s;
+}
+
+/*CARDS DESPLEGABLES*/
+
+
+/*CARDS DESPLEGABLES OPC-2*/
+.container2{ left: 0px; top: 10px;
+	width: 1000px;
+	justify-content: space-between;
+}
+
+.face{
+	width: 500px; height: auto;
+	overflow: hidden;
+	transition: all .7s ease-in-out;
+}
+
+.face1{
+	background: rgba(180, 110, 110);
+	height: auto;
+	z-index: 1;
+	transform: translateY(100px);
+}
+.card-movile:hover .face1{
+	background: #f02367;
+	transform: translateY(0);
+}
+
+.face1 .content{
+	opacity: 0.5;
+	transition: 0.7s;
+}
+.card-movile:hover .face1 .content{
+	opacity: 1;
+}
+
+.card-movile .face1 .content img{
+	transform: scale(.8);
+	transition: 0.7s;
+}
+.card-movile:hover .face1 .content img{
+	transform: scale(1);
+}
+
+.card-movile .face1 .content h3{
+	margin: 5px 0 0;
+	color: #ffffff;
+	font-size: 2.5em;
+}
+
+.face2{
+	background: #ffffff;
+	box-sizing: border-box;
+	box-shadow: 0 20px 50px rgba(0,0,0,0.8);
+	transform: translateY(-100px);
+	transition: 0.5s ease-in-out;
+}
+.card-movile:hover .face2{
+	transform: translateY(0);
+	height: auto;
+}
+
+.face2 p{
+	margin: 0;
+	padding: 0;
+}
+
+.face2 a{
+	margin: 15px 0 0;
+	font-weight: 900;
+}
+
+ 
+/*CARDS DESPLEGABLES OPC-2*/
+/*MODAL DEL VIAJE
+#horarios label{
+	width: 26px; height: 26px;
+	text-align: center;
+	line-height: 26px; font-size: 14px; font-weight: 600;
+	display: inline-block;
+	color: #111111;
+	background: #ffffff;
+	margin: 0 5px;
+	border-radius: 4px;
+	cursor: pointer;
+	transition: 0.2s ease-in-out;
+}
+#horarios label:hover{
+	background: #8f8e8e;
+	margin-bottom: 10px;
+}
+#hh7:checked ~ .horarios label{
+	background: #a30707;
+	margin-bottom: 10px;
+}*/

@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang=es>
+  <head>
+    <!-- Required meta tags -->
+    <meta charset=utf-8 />
+    <meta name=viewport content='width=device-width, initial-scale=1, shrink-to-fit=no'/>
+     
+    <!-- Bootstrap CSS -->
+    <link rel=stylesheet href=../css/bootstrap.min.css />
+
+    <link rel="stylesheet" href="../css/misestilos.css">
+    <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
+
+    <title> Cards Desplegables </title>
+  </head>
+  <body class="bg-dark d-flex">
+    <input type="checkbox" value="7" id="hh7">
+    <input type="checkbox" name="horario" value="8" id="h8">
+    <input type="checkbox" name="horario" value="9" id="h9">
+    <input type="checkbox" name="horario" value="10" id="h10">
+
+    <input type="radio" name="horarios" id="c1">
+    <input type="radio" name="horarios" id="c2">
+    <input type="radio" name="horarios" id="c3">
+
+    <div class="container position-relative">
+      <div class="card position-relative overflow-hidden card-movil">
+        <div class="imgBx position-absolute text-center">
+          <img src="../images/inicio-cuba.jpeg" class="rounded-lg position-absolute" alt="Paisaje de Cuba">
+        </div>
+        <div class="contentBx position-absolute text-center">
+          <h2 class="display-4 font-weight-light position-relative">Viaje a Cuba</h2>
+          <div class="size d-flex justify-content-center align-items-center py-1 px-4">
+            <h3>Horarios :</h3>
+            <label for="hh7" id="ho7">7</label>
+            <label for="h8"><span>8</span></label>
+            <label for="h9"><span>9</span></label>
+            <label for="h10"><span>10</span></label>
+          </div>
+          <div class="color d-flex justify-content-center align-items-center py-1 px-4">
+            <h3>Color :</h3>
+            <label for="c1"><span></span></label>
+            <label for="c2"><span></span></label>
+            <label for="c3"><span></span></label>
+          </div>
+          <div class="btn-group mt-4">
+            <button class="btn btn-info">&plus; Información</button>
+            <button class="btn btn-success">Reservar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="container2 position-relative d-flex">
+      <div class="card-movile position-relative">
+        <div class="face face1 position-relative d-flex justify-content-center align-items-center">
+          <div class="content text-center">
+            <img src="../images/inicio-cuba.jpeg" alt="Paisaje de Cuba" class="card-img">
+            <h3>Viaja a CUBA</h3>
+          </div>
+        </div>
+        <div class="face face2 position-relative p-3">
+          <div class="content flex-column text-center">
+            <p class="justify-content-start">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae tenetur molestias adipisci culpa officia excepturi laudantium accusantium. Vel, quia atque, animi totam harum voluptates dolor, non nobis dicta maiores illum nostrum earum quae veniam fugit doloremque nesciunt nihil reiciendis cumque quos delectus facilis ipsa accusamus. Similique corrupti praesentium fuga quis?</p>
+            <hr class="w-75">
+            <div class="btn-group mt-4">
+              <button class="btn btn-info" data-toggle="modal" data-target="#ModalTour">&plus; Información</button>
+              <button class="btn btn-success">Reservar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--MODALs-->
+    <!-- Button trigger modal -->
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#ModalTour">
+      Launch static backdrop modal
+    </button>
+
+    <!-- Modal -->
+    <div class="modal fade" id="ModalTour" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="ModalTourLabel" aria-hidden="true">
+      <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title text-uppercase font-weight-bold" id="ModalTourLabel">Titulo del Tour</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="container-fluid">
+              <div class="row">
+                <!--Imagen del viaje-->
+                <div class="col-md-7">                  
+                  <img src="../images/inicio-europa.jpg" class="img-fluid" alt="">
+                </div>
+                <!--RASGOS PRINCIPALES-->
+                <div class="col-md-5 text-center card">
+                  <div class="h1 font-weight-bold">DETALLES DEL VIAJE</div>
+                  
+                  <!--Precio $$$-->
+                  <div class="bg-dark text-white p-4">
+                    <span class="text-uppercase h4 mr-2">Precio:</span><b>$120</b>&nbsp;p/p
+                  </div>
+                  <!--Duración-->
+                  <div class="bg-info text-white p-4">
+                    <span class="text-uppercase h4 mr-2">Duración:</span> 1 día
+                  </div>
+                  <!--Horarios-->
+                  <div class="bg-danger text-white p-4 d-flex justify-content-center align-items-center py-1 px-4 btn-group btn-group-toggle">
+                    <span class="text-uppercase h4 mr-2">HORARIOS</span>
+                    <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                      <label class="btn btn-dark border">
+                        <input type="radio" name="options" id="option1"> 7 pm
+                      </label>
+                      <label class="btn btn-dark border">
+                        <input type="radio" name="options" id="option2"> 8 pm
+                      </label>
+                      <label class="btn btn-dark border">
+                        <input type="radio" name="options" id="option3"> 9 pm
+                      </label>
+                    </div>
+                  </div>
+                  <!--Tabla de precios-->
+                  <div class="bg-secondary text-white p-4 text-center py-1 px-4 btn-group-toggle">
+                    <span class="text-uppercase h4 mr-2">TABLA DE PRECIOS</span>
+                    <div class=" btn-group-toggle" data-toggle="buttons">
+                      <label class="btn btn-dark btn-block d-flex justify-content-between">
+                        <input type="radio" name="options" id="option1"> <span>1 PERSONA</span><span>$1500</span>
+                      </label>
+                      <label class="btn btn-dark btn-block d-flex justify-content-between">
+                        <input type="radio" name="options" id="option2">
+                        <span>2 PERSONA</span><span>$3500</span>
+                      </label>
+                      <label class="btn btn-dark btn-block d-flex justify-content-between">
+                        <input type="radio" name="options" id="option3">
+                        <span>3 PERSONA</span><span>$3250</span>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dicta ab sit quam facere in quasi repellat est atque. Itaque recusandae repudiandae aliquid cupiditate dolorem architecto voluptatibus at, praesentium, optio porro expedita dolore similique temporibus tempora enim dolor, illum voluptate aut rerum alias ducimus. Suscipit esse aliquam excepturi ab rerum fugiat, dignissimos dolor minima sapiente at dolorum quam eligendi inventore? Ipsam consequuntur minima vel aperiam veritatis modi soluta, magnam est autem consequatur nostrum ipsa dolor, fuga cumque voluptatibus, suscipit id enim iure. Dolore placeat impedit et, doloribus fugiat porro error voluptate deserunt distinctio quisquam id laborum repellat ea totam corrupti voluptatibus veritatis expedita, non excepturi. In sequi neque accusamus modi vitae, consectetur quam nulla, quis, sit dignissimos exercitationem nostrum! Quasi dolores tempore, minima at maiores quisquam temporibus cupiditate iure, neque incidunt commodi ipsum sed, ullam nemo inventore cumque? Placeat praesentium harum eum est quibusdam esse nostrum error cupiditate ducimus hic, aspernatur ipsa unde enim dolorem culpa alias quis. Voluptas labore nihil, amet illum voluptate deleniti ipsa ad. Animi vero aliquid, unde fuga dolorem repudiandae modi odio doloribus sunt voluptate sed eius ut magni ducimus perspiciatis sint quod consequuntur quasi numquam commodi. Perferendis beatae labore animi in porro rerum, commodi corrupti asperiores!
+              </div>
+                          
+
+              <!--Tabla de información-->
+            </div>
+            
+
+          </div>
+          <div class="modal-footer">
+            <button class="btn btn-success btn-lg btn-block">Reservar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    
+ 
+ 
+ 
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src=../js/jquery-3.5.1.min.js></script>
+    <script src=../js/popper.min.js></script>
+    <script src=../js/bootstrap.min.js></script>
+    <script src="../js/main.js"></script>
+  </body>
+</html>
